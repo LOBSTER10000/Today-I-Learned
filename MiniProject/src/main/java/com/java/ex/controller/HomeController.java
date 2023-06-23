@@ -1,4 +1,4 @@
-package com.javalect.springEx.controller;
+package com.java.ex.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -10,9 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import com.javalect.springEx.vo.MemberVo;
 
 /**
  * Handles requests for the application home page.
@@ -39,31 +36,14 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value="/login", method=RequestMethod.GET)
-	public String login() {
-		return "main/login";
+	
+	@RequestMapping(value = "/header", method = RequestMethod.GET)
+	public String header() {
+		return "main/header";
 	}
 	
-//	@RequestMapping(value="/webtest", method=RequestMethod.GET)
-//	public String test(HttpServletRequest servletRequest, Model model) {
-//		String id = servletRequest.getParameter("id");
-//		String pw = servletRequest.getParameter("pw");
-//		model.addAttribute("id", id);
-//		model.addAttribute("pw", pw);
-//		
-//		return "main/webtest";
-//	}
-	
-	@RequestMapping(value="/webtest", method=RequestMethod.GET)
-	public String test2(@RequestParam("id") String id, @RequestParam("pw") String pw, Model model) {
-		model.addAttribute("id", id);
-		model.addAttribute("pw", pw);
-		return "main/webtest";
-	}
-	
-	@RequestMapping(value="/member", method=RequestMethod.GET)
-	public String test(MemberVo memberVo) {
-		
-		return "main/member";
+	@RequestMapping(value = "/error1", method = RequestMethod.GET)
+	public String error() {
+		return "error/500";
 	}
 }
