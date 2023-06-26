@@ -46,4 +46,24 @@ public class HomeController {
 	public String error() {
 		return "error/500";
 	}
+	
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public String list() {
+		return "top/list";
+	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login() {
+		return "top/login";
+	}
+	
+	@RequestMapping(value = "/join", method = RequestMethod.GET)
+	public String join() {
+		return "top/join";
+	}
+	
+	@RequestMapping(value ="/boardMain", method = RequestMethod.GET)
+	public String boardMain() {
+		return "board/boardMain";
+	}
 }

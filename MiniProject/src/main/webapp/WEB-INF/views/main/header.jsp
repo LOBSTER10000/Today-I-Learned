@@ -1,5 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page session="false"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ page errorPage="/WEB-INF/views/error/500.jsp"%>
 <%
@@ -32,9 +31,15 @@
 				</p>
 				</div>
 				<div class="col-md-8" style="display:flex; justify-content:flex-end;">
-					<div class="header-right" style="padding-right: 5%;"><span>리스트</span></div>
-					<div class="header-right" style="padding-right: 5%;"><span>관리</span></div>
-					<div class="header-right" style="padding-right: 5%;"><span>로그인</span></div>
+					<div class="header-right" style="padding-right: 5%;"><span>
+					<a href="list" style="text-decoration:none; color:black;">리스트</a></span></div>
+					
+					<div class="header-right" style="padding-right: 5%;"><span>
+					<a href="#" style="text-decoration:none; color:black;">게시판 관리</a></span></div>
+					
+					<div class="header-right" style="padding-right: 5%;"><span>
+					<a href="login" style="text-decoration:none; color:black;">로그인</a></span></div>
+				
 				</div>
 			</div>
 
