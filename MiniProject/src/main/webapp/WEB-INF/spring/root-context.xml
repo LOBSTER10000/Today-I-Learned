@@ -5,22 +5,8 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
-		<!-- MySQL 드라이버 클래스 -->
-		<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		    <property name="url" value="jdbc:mysql://localhost:3306/your_database_name" />
-		    <property name="username" value="your_username" />
-		    <property name="password" value="your_password" />
-		</bean>
 		
-		<!-- MyBatis 설정 -->
-		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		    <property name="dataSource" ref="dataSource" />
-		    <property name="mapperLocations" value="classpath:mapper/*.xml" />
-		</bean>
 		
-		<!-- Mapper 스캐닝 설정 -->
-		<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		    <property name="basePackage" value="classpath*:mapper" />
-		</bean>
+		
+		
 </beans>

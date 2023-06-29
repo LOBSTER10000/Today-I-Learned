@@ -17,7 +17,7 @@
 			</div>
 			
 			<div style="text-align:center;">
-				<form action="#" method="post">
+				<form action="/joinUser" method="post">
 					<input type="text" name="userId" value="유저 아이디"><br>
 					<input type="password" name="password" value="패스워드"><br>
 					
